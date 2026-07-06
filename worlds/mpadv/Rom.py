@@ -27,7 +27,7 @@ class Rom:
     hash = "9d0d27345bf88de8b025aa24d54d6bad"
 
     def __init__(self, world: MultiWorld, player: int):
-        with open("Mario Party Advance (USA).gba", 'rb') as file:
+        with open("Downloads\Games\Mario Party Advance (USA)", 'rb') as file:
             content = file.read()
         patched = self.apply_static_delta(content)
         self.random = world.per_slot_randoms[player]
